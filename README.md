@@ -1,9 +1,8 @@
-###Full Stack Capstone Project
+# Full Stack Capstone Project
+ 
+## Full Stack Movie Casting Agency API
 
-##Full Stack Movie Casting Agency API
-
-This is the Capstone Project for the Udacity Full Stack Web Developer Nanodegree Program. It's an api allowing a casting agency creating movies 
-and managing and assigning actors to those movies and in this way the process is simplified and streamlined.
+This is the Capstone Project for the Udacity Full Stack Web Developer Nanodegree Program. It's an api allowing a casting agency creating movies and managing and assigning actors to those movies and in this way the process is simplified and streamlined.
 
 In this Capstone project, the concepts and skills learned in the course have been used to create and host an end-to-end API.
 
@@ -25,100 +24,104 @@ The skills learned in the program are summarized below:
 - Deploying Applications
 
 
-###Backend - Full Stack Movie Casting Agency API
+## Backend - Full Stack Movie Casting Agency API
 
-##Installing Dependencies for the Backend
+### Installing Dependencies for the Backend
 
 To access the api locally, you need a database, a virtual environment, dependencies installed, and environment variables set up. 
 You also need an account with Auth0, an authentication service.
 
-1.- This api runs on a PostgreSQL database. You can download PostgreSQL at postgresql.org.
+1. This api runs on a PostgreSQL database. You can download PostgreSQL at postgresql.org.
 
-2.- Python 3.7 - Follow instructions to install the latest version of python for your platform in the python docs
+2. Python 3.7 - Follow instructions to install the latest version of python for your platform in the python docs
 
-3.- Virtual Enviornment - We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized.
-
+3. Virtual Enviornment - We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized.
+```bash
 $ cd project_directory_path/
+```
 
-# Create a virtual environment
+### Create a virtual environment
+```bash
 $ py -3 -m venv venv
 
 #activate a virtual environment
 source venv/Scripts/activate
+```
 
 4.- PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by running:
-
+```bash
 	pip install -r requirements.txt
+```
 
-Database Setup
+### Database Setup
 
 With Postgres running, create a database using the setup_database.sql file provided. On a terminal screen run:
 
-Create database:
+**Create database:**
+```bash
 psql postgres postgres # connect to postgres as superuser to an already existing base
 \l
 \i '/starter/setup_database.sql' #path where the file is located
+```
 
 The api uses migrations, so for the creation of the tables we must run the following from the starter folder:
-
+```bash
 python manage.py db init
 python manage.py db migrate
 python manage.py db upgrade
-
+```
 
 To populate the database we must run the following in a terminal:
+```bash
+psql -U postgres casting_agency < C:\ ..\ .. capstone\starter\capstone_data.psql  # path where the file is located
+```
 
-psql -U postgres casting_agency < C:\ ..\ .. capstone\starter\capstone_data.psql  #path where the file is located
-
-
-Environment variables
+**Environment variables**
 
 Load environment variables configured in setup.sh
-
+```bash
 source setup.sh
+```
 
-
-Running the server
+**Running the server**
 
 From within the starter directory first ensure you are working using your created virtual environment.
 
 To run the server, execute:
-
+```bash
 set FLASK_APP=app.py
 flask run --reload
-
-
+```
 
 ## API Reference
 
 Getting Started
 
-Base URL: At present this app can be run locally and hosted as a base URL. The backend app is hosted at the default http://127.0.0.1:5000/ 
-and url of the hosted app is https://casting-agency-ec.herokuapp.com/
+Base URL: At present this app can be run locally and hosted as a base URL. The backend app is hosted at the default http://127.0.0.1:5000/ and url of the hosted app is https://casting-agency-ec.herokuapp.com/
 
-Authentication: 
+### Authentication: 
 
-Configuration in auth0:
+**Configuration in auth0:**
 
-Dominio: ecfsnd.us.auth0.com
-Name of the application created: CastingAgencyService
-Name of the api created: CastingAgency
+**Dominio:** ecfsnd.us.auth0.com
+**App name:** CastingAgencyService
+**Api name:** CastingAgency
 
 The following roles and permissions were set:
 
-Roles
-Name: Casting Assistant
-Description: Someone can view actors and movies
-Permisos:
+**Roles**
+**Name:** Casting Assistant
+**Description:** Someone can view actors and movies
+**Permisos:**
 	get:actors
 	get:movies	
 
-Name: Casting Director
-Description: 
+**Name:** Casting Director
+**Description:** 
 	All permissions a Casting Assistant has and…
 	Add or delete an actor from the database
 	Modify actors or movies
-Permisos:
+**Permisos:**
 	get:actors
 	get:movies
 	post:actors
@@ -126,11 +129,11 @@ Permisos:
 	patch:actors
 	patch:movies	
 
-Name: Executive Producer
-Description: 
+**Name:** Executive Producer
+**Description:** 
 	All permissions a Casting Director has and…
 	Add or delete a movie from the database
-Permisos:
+**Permisos:**
 	get:actors
 	get:movies
 	post:actors
@@ -319,7 +322,8 @@ dropdb casting_agency_test
 createdb casting_agency_test
 \q
 
-# Create the tables and insert data into the tables.
+### Create the tables and insert data into the tables.
+```
 psql -U postgres casting_agency_test < C:\ ..\ capstone\starter\capstone_data_test.psql 
 # Run the test
 python test_app.py
@@ -332,58 +336,60 @@ Tests include:
 
 ```
 
-Deploying and Hosting Full Stack Movie Casting Agency API
+## Deploying and Hosting Full Stack Movie Casting Agency API
 
-Getting Started on Heroku
-1.- Create an account on Heroku 
+**Getting Started on Heroku**
+1. Create an account on Heroku 
 	https://signup.heroku.com/
 
-2- Download the Heroku CLI (Command Line Interface) in order to run commands from the terminal that enable us to create a Heroku application and manage it.
+2. Download the Heroku CLI (Command Line Interface) in order to run commands from the terminal that enable us to create a Heroku application and manage it.
 	https://devcenter.heroku.com/categories/command-line
 
 
-Deployment Configuration
-1.- Update requirements file
+**Deployment Configuration**
+1. Update requirements file
 	pip freeze > requirements.txt
 
-2.- All environment variables of the api must be configured in setup.sh, including authentication.
+2. All environment variables of the api must be configured in setup.sh, including authentication.
 
-3.- Install gunicorn
+3. Install gunicorn
 	pip install gunicorn
 
-4.- Create the file Procfile. This file contains the following line:
+4. Create the file Procfile. This file contains the following line:
 	web: gunicorn app:app
 
 
-Deploy and Test
+### Deploy and Test
 
-1.- Create Heroku app
+1. Create Heroku app
  
  	heroku create casting-agency-ec --buildpack heroku/python
 
-2.- Add git remote for Heroku to local repository
+2. Add git remote for Heroku to local repository
 
 	git remote add casting https://git.heroku.com/casting-agency-ec.git
 
-3.- Add postgresql add on for our database
+3. Add postgresql add on for our database
 
 	heroku addons:create heroku-postgresql:hobby-dev --app casting-agency-ec
 
-4.- Check your configuration variables in Heroku
+4. Check your configuration variables in Heroku
 
 	heroku config --app casting-agency-ec
 
-5.- Fix the settings on Heroku
+5. Fix the settings on Heroku
 In the browser, the Heroku Panel accesses the application settings. We revealed the config variables and all the required environment variables for the project were added.
 
-6.- Push it
+6. Push it
 	git push casting main
 
-14.- Run migrations
+7. Run migrations
 Once the app is deployed, run migrations by running:
 	heroku run python manage.py db upgrade --app casting-agency-ec
 
-15.- Access to the api hosted from Postman
+8. Access to the api hosted from [Postman](https://getpostman.com).
+- Import the postman collection starter/Casting_agency_collection_postman.postman_collection.json.
+- Run each of the collection requests.
 
 
 
