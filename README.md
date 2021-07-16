@@ -29,26 +29,26 @@ The skills learned in the program are summarized below:
 ### Installing Dependencies for the Backend
 
 To access the api locally, you need a database, a virtual environment, dependencies installed, and environment variables set up. 
-You also need an account with Auth0, an authentication service.
+You also need an account with Auth0 and an authentication service.
 
-1. This api runs on a PostgreSQL database. You can download PostgreSQL at postgresql.org.
+1. This api runs on a PostgreSQL database. You can download PostgreSQL at [postgresql.org](postgresql.org).
 
-2. Python 3.7 - Follow instructions to install the latest version of python for your platform in the python docs
+2. Python 3.7 - Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python).
 
-3. Virtual Enviornment - We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized.
+3. Virtual Enviornment - We recommend wo rking within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized.
 ```bash
 $ cd project_directory_path/
 ```
 
-### Create a virtual environment
+**Create a virtual environment**
 ```bash
 $ py -3 -m venv venv
 
-#activate a virtual environment
+# activate a virtual environment
 source venv/Scripts/activate
 ```
 
-4.- PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by running:
+4. PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by running:
 ```bash
 	pip install -r requirements.txt
 ```
@@ -61,7 +61,7 @@ With Postgres running, create a database using the setup_database.sql file provi
 ```bash
 psql postgres postgres # connect to postgres as superuser to an already existing base
 \l
-\i '/starter/setup_database.sql' #path where the file is located
+\i '/starter/setup_database.sql' # path where the file is located
 ```
 
 The api uses migrations, so for the creation of the tables we must run the following from the starter folder:
@@ -97,12 +97,12 @@ flask run --reload
 
 Getting Started
 
-Base URL: At present this app can be run locally and hosted as a base URL. The backend app is hosted at the default http://127.0.0.1:5000/ and url of the hosted app is https://casting-agency-ec.herokuapp.com/
+Base URL: At present this api can be run locally and hosted as a base URL. The api backend is hosted at the default http://127.0.0.1:5000/ and url of the hosted api is https://casting-agency-ec.herokuapp.com/
 
-### Authentication: 
+### Authentication
 
 **Configuration in auth0:**
-
+```
 **Dominio:** ecfsnd.us.auth0.com
 **App name:** CastingAgencyService
 **Api name:** CastingAgency
@@ -142,7 +142,7 @@ The following roles and permissions were set:
 	patch:movies
 	post:movies
 	delete:movies
-
+```
 
 Error Handling
 
@@ -157,7 +157,7 @@ Errors are returned as JSON objects in the following format:
 ```
 ```
 
-The API will return five error types when requests fail:
+The API will return six error types when requests fail and an Auth error if authentication fails:
 
 400: Bad request
 403: Forbidden
@@ -313,6 +313,7 @@ DELETE '/api/v1.0/movies/${id}'
      'delete': id
 }
 
+```
 
 ## Testing
 To run the tests, run on a terminal screen
@@ -321,8 +322,9 @@ psql postgres postgres
 dropdb casting_agency_test
 createdb casting_agency_test
 \q
+```
 
-### Create the tables and insert data into the tables.
+### Create the tables and insert data.
 ```
 psql -U postgres casting_agency_test < C:\ ..\ capstone\starter\capstone_data_test.psql 
 # Run the test
@@ -348,44 +350,57 @@ Tests include:
 
 **Deployment Configuration**
 1. Update requirements file
+    ```
 	pip freeze > requirements.txt
-
+    ```
 2. All environment variables of the api must be configured in setup.sh, including authentication.
 
 3. Install gunicorn
+    ```
 	pip install gunicorn
+    ```
 
 4. Create the file Procfile. This file contains the following line:
+    ```
 	web: gunicorn app:app
+    ```
 
 
-### Deploy and Test
+**Deploy and Test**
 
 1. Create Heroku app
- 
+    ```
  	heroku create casting-agency-ec --buildpack heroku/python
+    ```
 
 2. Add git remote for Heroku to local repository
-
+    ```
 	git remote add casting https://git.heroku.com/casting-agency-ec.git
+    ```
 
 3. Add postgresql add on for our database
-
+    ```
 	heroku addons:create heroku-postgresql:hobby-dev --app casting-agency-ec
+    ```
 
 4. Check your configuration variables in Heroku
-
+    ```
 	heroku config --app casting-agency-ec
+    ```
 
 5. Fix the settings on Heroku
 In the browser, the Heroku Panel accesses the application settings. We revealed the config variables and all the required environment variables for the project were added.
 
 6. Push it
+    ```
 	git push casting main
+    ```
 
 7. Run migrations
 Once the app is deployed, run migrations by running:
+    ```
 	heroku run python manage.py db upgrade --app casting-agency-ec
+    ```
 
 8. Access to the api hosted from [Postman](https://getpostman.com).
 - Import the postman collection starter/Casting_agency_collection_postman.postman_collection.json.
