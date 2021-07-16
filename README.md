@@ -31,7 +31,7 @@ The skills learned in the program are summarized below:
 To access the api locally, you need a database, a virtual environment, dependencies installed, and environment variables set up. 
 You also need an account with Auth0 and an authentication service.
 
-1. This api runs on a PostgreSQL database. You can download PostgreSQL at [postgresql.org](postgresql.org).
+1. This api runs on a PostgreSQL database. You can download PostgreSQL at [postgresql.org](https://www.postgresql.org/).
 
 2. Python 3.7 - Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python).
 
@@ -102,18 +102,25 @@ Base URL: At present this api can be run locally and hosted as a base URL. The a
 ### Authentication
 
 **Configuration in auth0:**
-```
+
 **Dominio:** ecfsnd.us.auth0.com
+
 **App name:** CastingAgencyService
+
 **Api name:** CastingAgency
 
 The following roles and permissions were set:
 
 **Roles**
+
 **Name:** Casting Assistant
+
 **Description:** Someone can view actors and movies
+
 **Permisos:**
+
 	get:actors
+    
 	get:movies	
 
 **Name:** Casting Director
