@@ -104,30 +104,23 @@ Base URL: At present this api can be run locally and hosted as a base URL. The a
 **Configuration in auth0:**
 
 **Dominio:** ecfsnd.us.auth0.com
-
 **App name:** CastingAgencyService
-
 **Api name:** CastingAgency
 
 The following roles and permissions were set:
 
 **Roles**
-
 **Name:** Casting Assistant
-
 **Description:** Someone can view actors and movies
-
 **Permisos:**
-
 	get:actors
-    
 	get:movies	
 
 **Name:** Casting Director
 **Description:** 
-	All permissions a Casting Assistant has and…
-	Add or delete an actor from the database
-	Modify actors or movies
+	All permissions a Casting Assistant has and…    
+	Add or delete an actor from the database    
+	Modify actors or movies    
 **Permisos:**
 	get:actors
 	get:movies
