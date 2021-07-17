@@ -36,22 +36,22 @@ You also need an account with Auth0 and an authentication service.
 2. Python 3.7 - Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python).
 
 3. Virtual Enviornment - We recommend wo rking within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized.
-```bash
-$ cd project_directory_path/
-```
+    ```bash
+    $ cd project_directory_path/
+    ```
 
-**Create a virtual environment**
-```bash
-$ py -3 -m venv venv
+    **Create a virtual environment**
+    ```bash
+    $ py -3 -m venv venv
 
-# activate a virtual environment
-source venv/Scripts/activate
-```
+    # activate a virtual environment
+    source venv/Scripts/activate
+    ```
 
 4. PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by running:
-```bash
-pip install -r requirements.txt
-```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ### Database Setup
 
@@ -76,6 +76,7 @@ To populate the database we must run the following in a terminal:
 psql -U postgres casting_agency < C:\ ..\ .. capstone\starter\capstone_data.psql  # path where the file is located
 ```
 
+
 **Environment variables**
 
 Load environment variables configured in setup.sh
@@ -92,6 +93,7 @@ To run the server, execute:
 set FLASK_APP=app.py
 flask run --reload
 ```
+
 
 ## API Reference
 
@@ -144,6 +146,7 @@ Permisos:
 	post:movies
 	delete:movies
 ```
+
 
 
 **Error Handling**
@@ -318,6 +321,7 @@ DELETE '/api/v1.0/movies/${id}'
 ```
 
 
+
 ## Testing
 To run the tests, run on a terminal screen
 ```
@@ -340,6 +344,7 @@ Tests include:
 
 
 ```
+
 
 ## Deploying and Hosting Full Stack Movie Casting Agency API
 
@@ -409,8 +414,8 @@ Once the app is deployed, run migrations by running:
     ```
 
 8. Access to the api hosted from [Postman](https://getpostman.com).
-- Import the postman collection starter/Casting_agency_collection_postman.postman_collection.json.
-- Run each of the collection requests.
+    - Import the postman collection starter/Casting_agency_collection_postman.postman_collection.json.
+    - Run each of the collection requests.
 
 
 
