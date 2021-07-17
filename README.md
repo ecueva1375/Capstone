@@ -145,7 +145,8 @@ Permisos:
 	delete:movies
 ```
 
-Error Handling
+
+**Error Handling**
 
 Errors are returned as JSON objects in the following format:
 
@@ -316,18 +317,19 @@ DELETE '/api/v1.0/movies/${id}'
 
 ```
 
+
 ## Testing
 To run the tests, run on a terminal screen
 ```
-psql postgres postgres
+psql postgres postgres  # connecting to an existing database with a superuser
 dropdb casting_agency_test
 createdb casting_agency_test
 \q
 ```
 
-### Create the tables and insert data.
+** Create the tables and insert data**
 ```
-psql -U postgres casting_agency_test < C:\ ..\ capstone\starter\capstone_data_test.psql 
+psql -U postgres casting_agency_test < C:\ ..\ capstone\starter\capstone_data_test.psql  # path where the file is located
 # Run the test
 python test_app.py
 
@@ -342,10 +344,12 @@ Tests include:
 ## Deploying and Hosting Full Stack Movie Casting Agency API
 
 **Getting Started on Heroku**
-1. Create an account on Heroku 
+1. Create an account on Heroku
+
 	https://signup.heroku.com/
 
 2. Download the Heroku CLI (Command Line Interface) in order to run commands from the terminal that enable us to create a Heroku application and manage it.
+
 	https://devcenter.heroku.com/categories/command-line
 
 
@@ -361,7 +365,7 @@ Tests include:
 	pip install gunicorn
     ```
 
-4. Create the file Procfile. This file contains the following line:
+4. Create the file Procfile, this file contains the following line:
     ```
 	web: gunicorn app:app
     ```
@@ -390,6 +394,7 @@ Tests include:
     ```
 
 5. Fix the settings on Heroku
+
 In the browser, the Heroku Panel accesses the application settings. We revealed the config variables and all the required environment variables for the project were added.
 
 6. Push it
