@@ -50,7 +50,7 @@ source venv/Scripts/activate
 
 4. PIP Dependencies - Once you have your virtual environment setup and running, install dependencies by running:
 ```bash
-	pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Database Setup
@@ -59,7 +59,7 @@ With Postgres running, create a database using the setup_database.sql file provi
 
 **Create database:**
 ```bash
-psql postgres postgres # connect to postgres as superuser to an already existing base
+psql postgres postgres # connect to postgres as superuser to an existing base
 \l
 \i '/starter/setup_database.sql' # path where the file is located
 ```
@@ -325,12 +325,12 @@ psql postgres postgres  # connecting to an existing database with a superuser
 dropdb casting_agency_test
 createdb casting_agency_test
 \q
-```
 
-** Create the tables and insert data**
+```
+**Create the tables and insert data**
 ```
 psql -U postgres casting_agency_test < C:\ ..\ capstone\starter\capstone_data_test.psql  # path where the file is located
-# Run the test
+# Run the test located in the starter folder
 python test_app.py
 
 Tests include:
@@ -395,7 +395,7 @@ Tests include:
 
 5. Fix the settings on Heroku
 
-In the browser, the Heroku Panel accesses the application settings. We revealed the config variables and all the required environment variables for the project were added.
+    In the browser, the Heroku Panel accesses the application settings. We revealed the config variables and all the required environment variables for the project were added.
 
 6. Push it
     ```
