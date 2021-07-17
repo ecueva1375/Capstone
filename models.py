@@ -12,9 +12,9 @@ import os
 from sqlalchemy.sql import func
 
 # This line is uncommented when the app is being tested locally
-database_path = os.environ['DATABASE_URL']
+# database_path = os.environ['DATABASE_URL']
 # This line is used when the app is deployed in heroku.
-#database_path = os.environ['DATABASE_URL'].replace("://", "ql://", 1)
+database_path = os.environ['DATABASE_URL'].replace("://", "ql://", 1)
 
 db = SQLAlchemy()
 

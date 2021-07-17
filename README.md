@@ -414,6 +414,7 @@ Once the app is deployed, run migrations by running:
     ```
 
 8. Access to the api hosted from [Postman](https://getpostman.com).
+
     - Import the postman collection starter/Casting_agency_collection_postman.postman_collection.json.
     - Run each of the collection requests.
 
