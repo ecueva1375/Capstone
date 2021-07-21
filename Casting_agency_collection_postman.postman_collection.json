@@ -6,318 +6,758 @@
 	},
 	"item": [
 		{
-			"name": "https://casting-agency-ec.herokuapp.com/movies",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
+			"name": "Casting Assistant",
+			"item": [
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"title\": \"Biografía Bertha Montero\",\r\n\"release_date\": \"19/07/2018\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Back to the Future Part III\",\r\n    \"release_date\": \"25/05/1990\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Robert De Niro\",\r\n    \"age\": \"60\",\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies/1",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Wonder\",\r\n    \"release_date\": \"16/11/2017\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies/8",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors/1",
+					"protocolProfileBehavior": {
+						"tlsPreferServerCiphers": false
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jacob Tremblay\",\r\n    \"age\": \"15\",\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors/8",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies/8",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors/8",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBlOTFkOTY1MzA4MDkwMDY4MDAwNzY0IiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjg4NDIwMywiZXhwIjoxNjI2OTcwNjAzLCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZ2V0OmFjdG9ycyIsImdldDptb3ZpZXMiXX0.jym0VN5aLbNNA2Zy2Hg7M-muUAgTLIdPlXPlFEAxB19Glfma9PQXk0l9Ogm4XDkiwWLIeBjajh0vTJ8JteVkhlZuWUZvHQm15vNeu0mCymaWexOqbAalZ4IffQrrmy28-L5UxgxuT5rErEJLVAKk1zTEQSvXeLYsg_YcDbhs_L2FayIsgWoXcfG9_eTnNZSHGvvH5dwzVPifX1429-4LAnq1r5zoiC9ebVB8dbHu-RK-fA6fTLGoAEQWlZSGf1kvTl3HdQcG7DI4wRCIyuFJSJoPEyX3B6gOtBwIgNpyzpeQ4K44V_6wO3_t92J82gyVUN-2-onqz5amFtymq9qokw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
 				},
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/movies",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"movies"
-					]
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "https://casting-agency-ec.herokuapp.com/actors",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
+			"name": "Casting Director",
+			"item": [
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/actors",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"actors"
-					]
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Ghost\",\r\n    \"release_date\": \"13/08/1990\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Demi Moore\",\r\n    \"age\": \"58\",\r\n    \"gender\": \"Female\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies/1",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The Bodyguard\",\r\n    \"release_date\": \"15/11/1992\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies/5",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors/1",
+					"protocolProfileBehavior": {
+						"tlsPreferServerCiphers": false
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Julia Roberts\",\r\n    \"age\": \"54\",\r\n    \"gender\": \"Female\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors/5",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies/8",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors/8",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"8"
+							]
+						}
+					},
+					"response": []
 				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBkMDAwODU3NjQ0YzAwMDY4MjBkNTQzIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjg4NDI2NywiZXhwIjoxNjI2OTcwNjY3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImdldDphY3RvcnMiLCJnZXQ6bW92aWVzIiwicGF0Y2g6YWN0b3JzIiwicGF0Y2g6bW92aWVzIiwicG9zdDphY3RvcnMiXX0.krA2rv38ERY4UCInyo_TO-JXO2yaFYxoGQdKpB0eUqtBXDr05c9Wt6V6Egunjuze0Bwj-Kft-aJ2chw-okP-Ui2hKV69wrqypxjimAH5zfgpcgzFxKu_HoselLvF4cj9Sfts0EXsxicgo3y-ck41bfVBN2eV9t9l1SQlXH8PDUEJP6aDa-CrzyFfSThMzjAwI2Cnd50PGlOdGfGypqC20TH3s7-2Ru-kOGANNUAHHBagD5T7zRYj2m8rvYxQZgDC0QrhVBwPG0Me1FwT1TEO_hmEjMoAk6icaaBTGxs3PaxxN1Dm-nq2hwGxd6NJaHiz3G-Jap2qbEZvZ95WTnY-Gg",
+						"type": "string"
+					}
+				]
 			},
-			"response": []
-		},
-		{
-			"name": "https://casting-agency-ec.herokuapp.com/actors",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Jacob Tremblay\",\r\n    \"age\": \"14\",\r\n    \"gender\": \"Male\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
 				},
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/actors",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"actors"
-					]
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "https://casting-agency-ec.herokuapp.com/movies",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
+			"name": "Executive Producer",
+			"item": [
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Wonder\",\r\n    \"release_date\": \"14/11/2017\"\r\n        }",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Superman II\",\r\n    \"release_date\": \"10/12/2021\" \r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Johnny Depp\",\r\n    \"age\": \"58\",\r\n    \"gender\": \"Male\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies/1",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Miracle in cell 7\",\r\n    \"release_date\": \"30/11/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies/1",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors/1",
+					"protocolProfileBehavior": {
+						"tlsPreferServerCiphers": false
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nisa Sofiya Aksongur\",\r\n    \"age\": \"10\",\r\n    \"gender\": \"Female\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors/1",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/movies/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/movies/10",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://casting-agency-ec.herokuapp.com/actors/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://casting-agency-ec.herokuapp.com/actors/11",
+							"protocol": "https",
+							"host": [
+								"casting-agency-ec",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"actors",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjg4NDMzOSwiZXhwIjoxNjI2OTcwNzM5LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.iaFjn0cBZM-eMgR0HdPyrHTGOgSVuLrFH9pJnZnSNeL-MOluDM-aJ022zc-9ZzLPtIhGIwZw4otp2Z2adlScr_VP0e6P2L1KOXKmc5sxSrrd-rWYTPzJtQ48l07ibKTffmHrkWkWpu6bA71OgZKqRtINyZjtGjzNRH9hsuApktLbhYjnN0MBqdVUM_1GdsY3Az6wpe6cRdTiCe-kQ4PM_LEM7yXwySa-liV_JC0Pb9UUjyGzIjU1ZdzC_X-FInbH3dlHCZ1_90ZacCAGa8OsRJnRzVpezx4ZAZRd2NakLZ6A1RxO6YJUhNne595lMaF58gFGPfngVf2ZHtbu0jqaxQ",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
 				},
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/movies",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"movies"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "https://casting-agency-ec.herokuapp.com/actors/1",
-			"protocolProfileBehavior": {
-				"tlsPreferServerCiphers": false
-			},
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
-						}
-					]
-				},
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Jacob Tremblay\",\r\n    \"age\": \"15\",\r\n    \"gender\": \"Male\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
-				},
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/actors/6",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"actors",
-						"6"
-					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "https://casting-agency-ec.herokuapp.com/movies/1",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
-						}
-					]
-				},
-				"method": "PATCH",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Wonder\",\r\n    \"release_date\": \"16/11/2017\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/movies/6",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"movies",
-						"6"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "https://casting-agency-ec.herokuapp.com/actors/1",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/actors/7",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"actors",
-						"7"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "https://casting-agency-ec.herokuapp.com/movies/1",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-							"type": "string"
-						}
-					]
-				},
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "https://casting-agency-ec.herokuapp.com/movies/7",
-					"protocol": "https",
-					"host": [
-						"casting-agency-ec",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"movies",
-						"7"
-					]
-				}
-			},
-			"response": []
+			]
 		}
 	],
-	"auth": {
-		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkRobTNpaU95V05zaVRzbWV1R2Z1ZCJ9.eyJpc3MiOiJodHRwczovL2VjZnNuZC51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjBjNTdjZTRlZDZmY2IwMDY5NDhkODliIiwiYXVkIjoiQ2FzdGluZ0FnZW5jeSIsImlhdCI6MTYyNjQ2OTQ0NywiZXhwIjoxNjI2NTU1ODQ3LCJhenAiOiJ4RHJFUkJIVWpBM25Pb3RZQ3FxQ1Q0cDhlQ3pNTnluMSIsInNjb3BlIjoiIiwicGVybWlzc2lvbnMiOlsiZGVsZXRlOmFjdG9ycyIsImRlbGV0ZTptb3ZpZXMiLCJnZXQ6YWN0b3JzIiwiZ2V0Om1vdmllcyIsInBhdGNoOmFjdG9ycyIsInBhdGNoOm1vdmllcyIsInBvc3Q6YWN0b3JzIiwicG9zdDptb3ZpZXMiXX0.ffxHsq8O5vt7dGBkTfxc9ocYo4ExeLMdyaZyu8WDLE6fNC1Mj7eEobfKnkkDrFcn0ir67RvWrf1jAC6DFzXSxQIz19WauRp8ZiETUKbh6MsnaKnjwBsIi8wKkxWds5nYk59u4lAcq9HBZg9BiWKJBTqO1mW_bY2BEvtzTIFBMrFNUJSbhGQc6vd1-BQF6wCNQm0itsEZ1itro1THpmI-gLemvTC9i4jKBChJWMEqPJ-1e1myX4If7k7aosMXh1ybPxu8Cblj3pv_mvUbi2lRXYSFsCdvLdo5zA-ySKHeVXoMMePZmheVb-KatfU9G5696obol_cC9_LWV_puuwlJlQ",
-				"type": "string"
-			}
-		]
-	},
 	"event": [
 		{
 			"listen": "prerequest",
