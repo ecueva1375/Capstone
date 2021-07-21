@@ -111,14 +111,17 @@ Api name: CastingAgency
 The following roles and permissions were set:
 
 **Roles**
+
+**Name: Casting Assistant**
 ```
-Name: Casting Assistant
 Description: Someone can view actors and movies
 Permisos:
 	get:actors
 	get:movies	
+```
 
-Name: Casting Director
+**Name: Casting Director**
+```
 Description:
 	All permissions a Casting Assistant has and…    
 	Add or delete an actor from the database    
@@ -130,8 +133,10 @@ Permisos:
 	delete:actors
 	patch:actors
 	patch:movies	
+```
 
-Name: Executive Producer
+**Name: Executive Producer**
+```
 Description: 
 	All permissions a Casting Director has and…
 	Add or delete a movie from the database
