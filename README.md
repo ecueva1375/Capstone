@@ -6,8 +6,7 @@ This is the Capstone Project for the Udacity Full Stack Web Developer Nanodegree
 
 In this Capstone project, the concepts and skills learned in the course have been used to create and host an end-to-end API.
 
-The api has been developed using modeling data objects with SQLAlchemy, to limit access authentication with Auth0 has been used for which roles 
-and permissions were created for the different endpoints and finally the deployment was carried out using Heroku.
+The api has been developed using modeling data objects with SQLAlchemy, RESTful principles, to limit access authentication with Auth0 has been used for which roles and permissions were created for the different endpoints and finally the deployment was carried out using Heroku.
 
 The skills learned in the program are summarized below:
 
